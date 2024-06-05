@@ -1,0 +1,33 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+# Initialize the WebDriver (e.g., Chrome)
+driver = webdriver.Chrome()
+
+# Open a webpage
+driver.get('https://investsage.com/support/ticket/add')
+
+add_tickets_title = driver.find_element(By.XPATH, '//*[@id="main_div"]/div/form/div[1]/h4')
+add_tickets_icon = driver.find_element(By.XPATH, '//*[@id="main_div"]/div/form/div[1]/h4/i')
+select_entity_for_ticket_creation_label = driver.find_element(By.XPATH, '//*[@id="main_div"]/div/form/div[1]/div[1]/div[1]/div/label')
+select_entity_for_ticket_creation_dropdown = driver.find_element(By.XPATH, '//*[@id="ticket_type_id"]')
+select_entity_for_ticket_creation_please_select_option = driver.find_element(By.XPATH, '//*[@id="ticket_type_id"]/option[1]')
+select_entity_for_ticket_creation_product_option = driver.find_element(By.XPATH, '//*[@id="ticket_type_id"]/option[2]')
+select_entity_for_ticket_creation_wallet_option = driver.find_element(By.XPATH, '//*[@id="ticket_type_id"]/option[3]')
+select_priority_label = driver.find_element(By.XPATH, '//*[@id="main_div"]/div/form/div[1]/div[1]/div[2]/div/label')
+select_priority_dropdown =  driver.find_element(By.XPATH, '//*[@id="priority_id"]')
+select_priority_please_select_option = driver.find_element(By.XPATH, '//*[@id="priority_id"]/option[1]')
+select_priority_low_option = driver.find_element(By.XPATH, '//*[@id="priority_id"]/option[2]')
+select_priority_medium_option = driver.find_element(By.XPATH, '//*[@id="priority_id"]/option[3]')
+select_priority_high_option = driver.find_element(By.XPATH, '//*[@id="priority_id"]/option[4]')
+search_entity_number_label = driver.find_element(By.XPATH, '//*[@id="main_div"]/div/form/div[1]/div[1]/div[3]/div/label')
+select_entity_number_dropdown = driver.find_element(By.XPATH, '//*[@id="select2-searchEntity-container"]')
+select_entity_number_dropdown_arrow = driver.find_element(By.XPATH, '//*[@id="main_div"]/div/form/div[1]/div[1]/div[3]/div/span/span[1]/span/span[2]')
+please_select_three_or_more_characters_text = driver.find_element(By.XPATH, '//*[@id="select2-searchEntity-results"]/li')
+select_entity_number_input =driver.find_element(By.XPATH, '/html/body/span/span/span[1]/input')
+email_label = driver.find_element(By.XPATH, '//*[@id="main_div"]/div/form/div[1]/div[1]/div[4]/div/label')
+email_text =  driver.find_element(By.XPATH, '//*[@id="email"]')
+subject_label =  driver.find_element(By.XPATH, '//*[@id="main_div"]/div/form/div[1]/div[1]/div[5]/div/label')
+subject_input_field = driver.find_element(By.XPATH, '//*[@id="subject"]')  
+description_label =driver.find_element(By.XPATH, '//*[@id="main_div"]/div/form/div[1]/div[2]/div/div/label')
+description_textbox =  driver.find_element(By.XPATH, '//*[@id="description"]')
+save_button = driver.find_element(By.XPATH, '//*[@id="main_div"]/div/form/div[2]/button')
