@@ -7,6 +7,8 @@ driver = webdriver.Chrome()
 # Open a webpage
 driver.get('https://investsage.com/investor/register')
 
+# testing
+
 join_investsage_title = driver.find_element(By.XPATH, '//*[@id="step1"]/div/h4')
 full_name_label =  driver.find_element(By.XPATH, '//*[@id="form_step1"]/div[1]/div[1]/div/label') 
 full_name_input = driver.find_element(By.XPATH,'//*[@id="name"]')
